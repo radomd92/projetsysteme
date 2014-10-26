@@ -33,14 +33,14 @@ bool MoteurBD::supprimerDonnee(DonneeElementaire clef)
 {
     /* Supprime une donnée élémentaire définie par "clef" dans la BD
      */
-
+    return true;
 }
 
 bool MoteurBD::modifierDonneee(DonneeElementaire clef)
 {
     /* Modifier une donnée élémentaire définie par "clef" dans la BD
      */
-
+    return false;
 }
 
 
