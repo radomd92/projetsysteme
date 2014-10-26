@@ -13,8 +13,10 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    moteurbd.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    moteurbd.h
 
 FORMS    += mainwindow.ui
