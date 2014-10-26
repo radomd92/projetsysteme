@@ -14,9 +14,13 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    moteurbd.cpp
+    moteurbd.cpp \
+    JSONLib/json_st.cc \
+    JSONLib/test.cc
 
 HEADERS  += mainwindow.h \
-    moteurbd.h
+    moteurbd.h \
+    JSONLib/json_st.hh \
+    JSONLib/json.hh
 
 FORMS    += mainwindow.ui

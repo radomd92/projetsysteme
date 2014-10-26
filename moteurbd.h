@@ -1,16 +1,19 @@
 #ifndef MOTEURBD_H
 #define MOTEURBD_H
 
-#include <stdlib>
+#include <stdlib.h>
+#include <iostream>
+#include <vector>
 
 using namespace std;
+//using namespace JSON;
 
-typedef DonneeElementaire
+typedef struct DonneeElementaire
 {
     char *donnee; int taille;
 } DonneeElementaire;
 
-typedef LigneDonnee
+typedef struct LigneDonnee
 {
     DonneeElementaire clef, valeur;
 } LigneDonnee;
@@ -18,15 +21,15 @@ typedef LigneDonnee
 class MoteurBD
 {
 private:
-    LigneDonnee
+    vector<LigneDonnee> *m_liste;
 public:
     MoteurBD();
     ~MoteurBD();
 
     // manipulation de données
-    bool ajouterDonnee(Donnee donnee);
-    bool supprimerDonnee(char *clef);
-    bool modifierDonneee(char *clef);
+    bool ajouterDonnee(DonneeElementaire donnee);
+    bool supprimerDonnee(DonneeElementaire clef);
+    bool modifierDonneee(DonneeElementaire clef);
 
     // lecture des données (incomplet)
     LigneDonnee lireclef(char *clef);
