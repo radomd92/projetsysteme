@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <iostream>
 #include <vector>
-#include <JSONLib2/cJSON/cJSON.h>
+#include <cJSON/cJSON.h>
 
 using namespace std;
 //using namespace JSON;

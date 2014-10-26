@@ -15,10 +15,13 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
         moteurbd.cpp \
-    JSONLib2/cJSON/cJSON.c
+    JSONLib2/cJSON/cJSON.c \
+    cJSON/test.c \
+    cJSON/cJSON.c
 
 HEADERS  += mainwindow.h \
     moteurbd.h \
-    JSONLib2/cJSON/cJSON.h
+    JSONLib2/cJSON/cJSON.h \
+    cJSON/cJSON.h
 
 FORMS    += mainwindow.ui
