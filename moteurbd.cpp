@@ -13,15 +13,15 @@ bool MoteurBD::ajouterDonnee(DonneeElementaire donnee)
    */
     int estUnique = 0;
 
-    for (vector<DonneeElementaire>::iterator it = m_liste->begin(); // ATTENTION: NE marche PAS
+    /*for (vector<DonneeElementaire>::iterator it = m_liste->begin(); // ATTENTION: NE marche PAS
          it != m_liste->end();
          it++)
     {
         //if ( strcmp(it., donnee.taille)
-    }
+    }*/
     if (estUnique)
     {
-        m_liste->insert(m_liste->size(), &donnee, &donnee);
+        //m_liste->insert(m_liste->size(), &donnee, &donnee);
         return true;
     }
     else

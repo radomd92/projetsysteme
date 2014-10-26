@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <iostream>
 #include <vector>
+#include <JSONLib2/cJSON/cJSON.h>
 
 using namespace std;
 //using namespace JSON;
@@ -32,7 +33,7 @@ public:
     bool modifierDonneee(DonneeElementaire clef);
 
     // lecture des données (incomplet)
-    LigneDonnee lireclef(char *clef);
+    LigneDonnee lireclef(DonneeElementaire clef);
 
 
 };
