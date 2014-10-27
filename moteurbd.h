@@ -5,6 +5,8 @@
 #include <iostream>
 #include <map>
 #include <cJSON/cJSON.h>
+#include <stdio.h>
+#include <string.h>
 
 using namespace std;
 //using namespace JSON;
@@ -30,7 +32,7 @@ public:
     // manipulation de données
     bool ajouterDonnee(DonneeElementaire donnee);
     bool supprimerDonnee(DonneeElementaire clef);
-    bool modifierDonneee(DonneeElementaire clef);
+    bool modifierDonneee(DonneeElementaire clef,DonneeElementaire valeur);
 
     // lecture des données (incomplet)
     LigneDonnee lireclef(DonneeElementaire clef);
