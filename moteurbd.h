@@ -2,24 +2,13 @@
 #define MOTEURBD_H
 
 #include <stdlib.h>
+#include <string.h>
 #include <iostream>
 #include <map>
 #include <cJSON/cJSON.h>
-#include <stdio.h>
-#include <string.h>
 
 using namespace std;
 //using namespace JSON;
-
-typedef struct DonneeElementaire
-{
-    char *donnee; int taille;
-} DonneeElementaire;
-
-typedef struct LigneDonnee
-{
-    DonneeElementaire clef, valeur;
-} LigneDonnee;
 
 class MoteurBD
 {
@@ -35,7 +24,7 @@ public:
     bool modifierDonneee(DonneeElementaire clef,DonneeElementaire valeur);
 
     // lecture des données (incomplet)
-    LigneDonnee lireclef(DonneeElementaire clef);
+    DonneeElementaire lireclef(DonneeElementaire clef);
 
 
 };

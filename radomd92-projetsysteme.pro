@@ -16,10 +16,13 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     moteurbd.cpp \
     cJSON/test.c \
-    cJSON/cJSON.c
+    cJSON/cJSON.c \
+    supprimerdonnee.cpp \
+    lireclef.cpp
 
 HEADERS  += mainwindow.h \
     moteurbd.h \
-    cJSON/cJSON.h
+    cJSON/cJSON.h \
+    structures.h
 
 FORMS    += mainwindow.ui
