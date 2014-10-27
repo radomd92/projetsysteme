@@ -2,22 +2,14 @@
 #define MOTEURBD_H
 
 #include <stdlib.h>
+#include <string.h>
 #include <iostream>
 #include <map>
 #include <cJSON/cJSON.h>
+#include "structures.h"
 
 using namespace std;
 //using namespace JSON;
-
-typedef struct DonneeElementaire
-{
-    char *donnee; int taille;
-} DonneeElementaire;
-
-typedef struct LigneDonnee
-{
-    DonneeElementaire clef, valeur;
-} LigneDonnee;
 
 class MoteurBD
 {
