@@ -22,10 +22,12 @@ public:
     // manipulation de données
     bool ajouterDonnee(DonneeElementaire donnee);
     bool supprimerDonnee(DonneeElementaire clef);
-    bool modifierDonneee(DonneeElementaire clef);
+    bool modifierDonneee(DonneeElementaire clef,DonneeElementaire valeur);
 
-    // lecture des données (incomplet)
+    // lecture des données
     DonneeElementaire lireclef(DonneeElementaire clef);
+
+    // Interface réseau (à faire)
 
 
 };
