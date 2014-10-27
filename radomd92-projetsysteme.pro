@@ -20,8 +20,7 @@ SOURCES += main.cpp\
     supprimerdonnee.cpp \
     lireclef.cpp \
     modifierdonnees.cpp \
-    afficherdonnees.cpp \
-    ajouterdonnee.cpp
+    afficherdonnees.cpp
 
 HEADERS  += mainwindow.h \
     moteurbd.h \
