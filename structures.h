@@ -52,4 +52,19 @@ typedef struct LigneDonnee
 } LigneDonnee;
 
 
+bool operator < (const DonneeElementaire &a, const DonneeElementaire &b)
+{
+    if (a.taille < b.taille) // taille(a) < taille(b)
+        return true;
+    else if (a.taille == b.taille) // taille(a) = taille(b)
+    {
+        if (strncmp(a.donnee, b.donnee, b.taille)<0) // a < b
+            return true;
+        else
+            return false;
+    }
+    else
+        return false;
+}
+
 #endif // STRUCTURES_H
