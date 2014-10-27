@@ -3,7 +3,7 @@
 
 #include <stdlib.h>
 #include <iostream>
-#include <vector>
+#include <map>
 #include <cJSON/cJSON.h>
 
 using namespace std;
@@ -22,7 +22,7 @@ typedef struct LigneDonnee
 class MoteurBD
 {
 private:
-    map <DonneeElementaire, DonneeElementaire> m_map;
+    map<DonneeElementaire, DonneeElementaire> *m_map;
 public:
     MoteurBD();
     ~MoteurBD();

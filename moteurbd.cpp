@@ -2,7 +2,12 @@
 
 MoteurBD::MoteurBD()
 {
-    this->m_liste = new vector <LigneDonnee> ();
+    m_map = new map<DonneeElementaire, DonneeElementaire>();
+}
+
+MoteurBD::~MoteurBD()
+{
+    delete m_map;
 }
 
 bool MoteurBD::ajouterDonnee(DonneeElementaire donnee)
