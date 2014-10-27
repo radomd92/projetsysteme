@@ -6,7 +6,6 @@
 #include <iostream>
 #include <map>
 #include <cJSON/cJSON.h>
-#include "structures.h"
 
 using namespace std;
 //using namespace JSON;
