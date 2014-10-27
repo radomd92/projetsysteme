@@ -17,7 +17,8 @@ SOURCES += main.cpp\
     moteurbd.cpp \
     cJSON/test.c \
     cJSON/cJSON.c \
-    supprimerdonnee.cpp
+    supprimerdonnee.cpp \
+    lireclef.cpp
 
 HEADERS  += mainwindow.h \
     moteurbd.h \

@@ -25,7 +25,7 @@ public:
     bool modifierDonneee(DonneeElementaire clef);
 
     // lecture des données (incomplet)
-    LigneDonnee lireclef(DonneeElementaire clef);
+    DonneeElementaire lireclef(DonneeElementaire clef);
 
 
 };
