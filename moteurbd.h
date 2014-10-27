@@ -22,7 +22,7 @@ typedef struct LigneDonnee
 class MoteurBD
 {
 private:
-    vector<LigneDonnee> *m_liste;
+    map <DonneeElementaire, DonneeElementaire> m_map;
 public:
     MoteurBD();
     ~MoteurBD();

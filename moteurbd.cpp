@@ -7,25 +7,7 @@ MoteurBD::MoteurBD()
 
 bool MoteurBD::ajouterDonnee(DonneeElementaire donnee)
 {
-    /* Insertion d'une donnée d'une donnée élémentaire dans la base de donnée
-     * - La clef est auto-incrémentée(?)
-     *
-   */
-    int estUnique = 0;
-
-    /*for (vector<DonneeElementaire>::iterator it = m_liste->begin(); // ATTENTION: NE marche PAS
-         it != m_liste->end();
-         it++)
-    {
-        //if ( strcmp(it., donnee.taille)
-    }*/
-    if (estUnique)
-    {
-        //m_liste->insert(m_liste->size(), &donnee, &donnee);
-        return true;
-    }
-    else
-        return false;
+    return true;
 
 }
 
