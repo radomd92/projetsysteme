@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <iostream>
+#include "structures.h"
 #include <map>
 #include <cJSON/cJSON.h>
 
@@ -14,9 +15,13 @@ class MoteurBD
 {
 private:
     map<DonneeElementaire, DonneeElementaire> *m_map;
+    long int clef;
 public:
     MoteurBD();
     ~MoteurBD();
+
+    // visualisation
+    void afficherDonnees();
 
     // manipulation de données
     bool ajouterDonnee(DonneeElementaire donnee);

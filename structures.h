@@ -5,7 +5,19 @@ typedef struct DonneeElementaire
 {
     char *donnee; int taille;
 
-    char* operator = (DonneeElementaire &de) // DonneeEleentaire a <-- DonneeElementaire de
+    void initialiser()
+    {
+        taille = 0;
+        donnee = new char[1];
+    }
+
+    void initialiser(char *chaine)
+    {
+        taille = strlen(chaine);
+        strncpy(donnee, chaine, taille);
+    }
+
+    char* operator = (const DonneeElementaire &de) // DonneeEleentaire a <-- DonneeElementaire de
     {
         donnee = new char[de.taille];
         taille = de.taille;
@@ -31,7 +43,6 @@ typedef struct DonneeElementaire
             else return true;
         }
     }
-
 
 } DonneeElementaire;
 
