@@ -31,13 +31,9 @@ public:
 
     // lecture des données
     DonneeElementaire lireclef(DonneeElementaire clef);
-<<<<<<< HEAD
-=======
 
     // Interface réseau (à faire)
 
-
->>>>>>> 762bd38770beb6ff1c1be1de3e48902ba352f2fe
 };
 
 #endif // MOTEURBD_H

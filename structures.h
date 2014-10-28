@@ -17,6 +17,21 @@ typedef struct DonneeElementaire
         strncpy(donnee, chaine, taille);
     }
 
+    bool operator < (const DonneeElementaire &b)
+    {
+        if (taille < b.taille) // taille(a) < taille(b)
+            return true;
+        else if (taille == b.taille) // taille(a) = taille(b)
+        {
+            if (strncmp(donnee, b.donnee, b.taille)<0) // a < b
+                return true;
+            else
+                return false;
+        }
+        else
+            return false;
+    }
+
     char* operator = (const DonneeElementaire &de) // DonneeEleentaire a <-- DonneeElementaire de
     {
         donnee = new char[de.taille];
@@ -51,20 +66,5 @@ typedef struct LigneDonnee
     DonneeElementaire clef, valeur;
 } LigneDonnee;
 
-
-bool operator < (const DonneeElementaire &a, const DonneeElementaire &b)
-{
-    if (a.taille < b.taille) // taille(a) < taille(b)
-        return true;
-    else if (a.taille == b.taille) // taille(a) = taille(b)
-    {
-        if (strncmp(a.donnee, b.donnee, b.taille)<0) // a < b
-            return true;
-        else
-            return false;
-    }
-    else
-        return false;
-}
 
 #endif // STRUCTURES_H

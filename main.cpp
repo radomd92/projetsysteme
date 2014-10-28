@@ -16,11 +16,7 @@ int main(int argc, char *argv[])
     MoteurBD *bd = new MoteurBD();
     DonneeElementaire de;
     de.initialiser("[\"Eday\", \"Monday\"]");
-    bd->ajouterDonnee(de);
-    de.initialiser("[\"Eday\", \"Mondazy\"]");
-    bd->ajouterDonnee(de);
-    de.initialiser("[\"Edazezeezy\", \"ezsfMondazy\"]");
-    bd->ajouterDonnee(de);
+    bd->ajouterDonnee(de, de);
 
     bd->afficherDonnees();
 
