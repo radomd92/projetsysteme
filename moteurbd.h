@@ -6,6 +6,7 @@
 #include <iostream>
 #include <map>
 #include <cJSON/cJSON.h>
+#include "structures.h"
 
 using namespace std;
 //using namespace JSON;
@@ -19,14 +20,12 @@ public:
     ~MoteurBD();
 
     // manipulation de données
-    bool ajouterDonnee(DonneeElementaire donnee);
+    bool ajouterDonnee(DonneeElementaire clef,DonneeElementaire valeur);
     bool supprimerDonnee(DonneeElementaire clef);
     bool modifierDonneee(DonneeElementaire clef,DonneeElementaire valeur);
 
     // lecture des données (incomplet)
     DonneeElementaire lireclef(DonneeElementaire clef);
-
-
 };
 
 #endif // MOTEURBD_H
