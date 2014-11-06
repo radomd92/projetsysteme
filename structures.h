@@ -1,5 +1,7 @@
 #ifndef STRUCTURES_H
 #define STRUCTURES_H
+#include <string.h>
+#include <assert.h>
 
 typedef struct DonneeElementaire
 {
@@ -14,23 +16,17 @@ typedef struct DonneeElementaire
     void initialiser(char *chaine)
     {
         taille = strlen(chaine);
+        donnee = new char[taille+1];
+        assert(donnee != 0);
         strncpy(donnee, chaine, taille);
     }
 
-    bool operator < (const DonneeElementaire &b)
+    void detruire()
     {
-        if (taille < b.taille) // taille(a) < taille(b)
-            return true;
-        else if (taille == b.taille) // taille(a) = taille(b)
-        {
-            if (strncmp(donnee, b.donnee, b.taille)<0) // a < b
-                return true;
-            else
-                return false;
-        }
-        else
-            return false;
+        taille = 0;
+        delete donnee;
     }
+
 
     char* operator = (const DonneeElementaire &de) // DonneeEleentaire a <-- DonneeElementaire de
     {
@@ -61,10 +57,10 @@ typedef struct DonneeElementaire
 
 } DonneeElementaire;
 
+
 typedef struct LigneDonnee
 {
     DonneeElementaire clef, valeur;
 } LigneDonnee;
-
 
 #endif // STRUCTURES_H

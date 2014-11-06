@@ -6,6 +6,10 @@ DonneeElementaire MoteurBD::lireclef(DonneeElementaire clef)
     DonneeElementaire ret;
     map<DonneeElementaire,DonneeElementaire>:: iterator i;
 
+    i = m_map->find(clef);
+    ret = i->first;
+    return ret;
+/*
     for(i = m_map->begin();i != m_map->end(); i++)
     {
         ret = i->first; // accede à la clé
@@ -15,4 +19,5 @@ DonneeElementaire MoteurBD::lireclef(DonneeElementaire clef)
         }
     }
     return ret;
+*/
 }

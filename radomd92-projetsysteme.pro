@@ -20,7 +20,9 @@ SOURCES += main.cpp\
     supprimerdonnee.cpp \
     lireclef.cpp \
     modifierdonnees.cpp \
-    afficherdonnees.cpp
+    ajouterDonnee.cpp \
+    afficherdonnees.cpp \
+    genererClef.cpp
 
 HEADERS  += mainwindow.h \
     moteurbd.h \
@@ -28,3 +30,5 @@ HEADERS  += mainwindow.h \
     structures.h
 
 FORMS    += mainwindow.ui
+
+OTHER_FILES +=

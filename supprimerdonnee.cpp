@@ -14,6 +14,7 @@ bool MoteurBD::supprimerDonnee(DonneeElementaire clef)
         if(memcmp(tmp.donnee,clef.donnee,tmp.taille)==0)
         {
             m_map->erase(i);
+            m_compteur--;
             return true;
         }
     }

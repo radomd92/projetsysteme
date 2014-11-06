@@ -7,7 +7,7 @@
 #include "structures.h"
 #include <map>
 #include <cJSON/cJSON.h>
-#include "structures.h"
+#include <time.h>
 
 using namespace std;
 //using namespace JSON;
@@ -16,7 +16,8 @@ class MoteurBD
 {
 private:
     map<DonneeElementaire, DonneeElementaire> *m_map;
-    long int clef;
+    int m_compteur;
+
 public:
     MoteurBD();
     ~MoteurBD();
@@ -28,12 +29,20 @@ public:
     bool ajouterDonnee(DonneeElementaire clef,DonneeElementaire valeur);
     bool supprimerDonnee(DonneeElementaire clef);
     bool modifierDonneee(DonneeElementaire clef,DonneeElementaire valeur);
+    DonneeElementaire genererClef();
+    DonneeElementaire genererClef(int n);
 
     // lecture des données
-    DonneeElementaire lireclef(DonneeElementaire clef);
+    DonneeElementaire lireclef(DonneeElementaire clef); // valeur associée à clef
+
+    // fichier
+    void charger();
+    void sauvegarder();
 
     // Interface réseau (à faire)
 
 };
+
+bool operator < (const DonneeElementaire &b, const DonneeElementaire &c);
 
 #endif // MOTEURBD_H
